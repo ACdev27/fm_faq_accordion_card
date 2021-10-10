@@ -1,0 +1,224 @@
+/*
+
+
+See hover states for all interactive elements on the page
+Hide/Show the answer to a question when the question is clicked
+
+Question - make whole div that includes questoin adn arrow icon clicable.
+
+Answer - starts hidden. Then revealed.
+
+hover - question text turns orange (like icon)
+
+Question active it is bold and black
+
+image. Litle cube, looks like it moves to left on hover?
+
+
+Accordian
+Collapsing an element will animate the height from its current value to 0.
+
+Arrow - 180 degee rotation
+
+Do they all close except for one you click to open?
+
+
+HTML 
+.accordian
+     .accordian-item
+          h2	faq-question
+          div  faq-answer
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --font-primary: 'Kumbh Sans', sans-serif;  /* Weights 400 700 */
+    --text-headline: hsl(238, 29%, 16%);
+    --text-normal: hsl(237, 12%, 33%);
+    --text-selected: hsl(238, 29%, 16%);
+    --text-hover: hsl(14, 88%, 65%);
+    --text-answer: hsl(240, 6%, 50%);
+    --gradient-top: hsl(273, 75%, 66%);
+    --gradient-bottom: hsl(240, 73%, 65%);
+    --divider-color: hsl(240, 5%, 91%);
+    --card-bg: #ffffff;
+}
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.2rem;
+    font-family: var(--font-primary);
+}
+h1 {
+    margin-bottom: 39px;
+    font-family: var(--font-primary);
+    font-size: 3.2rem;
+    color: var(--text-headline);
+    font-weight: 700;
+    line-height: 1.2;
+}
+#faq-accordion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 768px;
+    background: linear-gradient(180deg, var(--gradient-top), var(--gradient-bottom));
+}
+.content {
+    flex-basis: 100%;
+    max-width: 1440px;
+    margin: 0 25px;
+}
+.faq-accordion-card {
+    display: flex;
+    flex-direction: row;
+    max-width: 920px;
+    /* height: 500px; */
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    border-radius: 23px;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;;
+    position: relative;
+    background-image: url('images/bg-pattern-desktop.svg') no-repeat center center/cover
+
+
+    background-repeat: no-repeat, no-repeat;
+    background-position: center 100px center;
+    background-position-x: 50px;
+
+    overflow: clip;
+}
+
+.image-container::before {
+    background: url('images/illustration-box-desktop.svg') no-repeat center center;
+}
+
+
+.image-container img {
+    position: relative;
+    width: 100%;
+    max-width: 471px;
+    left: -68px;
+}
+
+/* .image-container::before {
+    content: url(images/illustration-box-desktop.svg);
+    width: 90px;
+    height: 106px;
+    position: absolute;
+    top: 330px;
+    left: 50px;
+    z-index: 10; 
+} */
+
+.faq-container {
+    flex-basis: 50%;
+    margin: 63px 0px;
+    padding-left: 20px;
+    padding-right: 95px;
+}
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-container button {
+    width: 100%;
+    margin-bottom: 5px;
+    background-color: transparent;
+}
+
+.faq-item.closed button:hover {
+    color: var(--text-hover);
+}
+
+
+.faq-question {
+    position: relative;
+    font-size: 1.4rem;
+    color: var(--text-normal);
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.faq-question:hover {
+    color: var(--text-hover);
+}
+.faq-question::after {
+    content: url(images/icon-arrow-down.svg);
+    /* width: 10px;
+    height: 7px; */
+    position: absolute;
+    /* float: right; */
+    /* top: 9px; */
+    right: 16px;
+    transform: rotate(180deg);
+    transition: transform 250ms ease-out;
+}
+.faq-item.close .faq-question::after {
+    transform: rotate(0deg);
+    /* transform-origin: 92% 82%; */
+    /* top: 1px;
+    right: 10px; */
+}
+.faq-item.close .faq-question {
+    font-weight: 400;
+}
+
+hr {
+    border: 1px solid var(--divider-color);
+    margin-bottom: 12px;
+}
+
+.faq-answer {
+    display: none;
+    max-height: 150px;
+    padding-right: 30px;
+    font-size: 1.2rem;
+    color: var(--text-normal);
+    font-weight: 400;
+    line-height: 1.8;
+    border: none;
+    outline: none;
+    transition: max-height 700ms ease-out;
+}
+.faq-item.close .faq-answer {
+    overflow: hidden;
+    max-height: 0;
+}
+
+
+
+
+/*
+
+
+*/
+
+
+
+
+
+
+
+
+
+    .attribution { font-size: 1.1rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
