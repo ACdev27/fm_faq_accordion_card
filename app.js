@@ -16,8 +16,7 @@ for (let i = 0; i < questions.length; i++) {
   questions[i].addEventListener('click', function() {
     
 
-    
-
+  
 
           // close current open faq
     // let faqItemOpen = document.getElementsByClassName('faq-item');
@@ -55,12 +54,6 @@ for (let i = 0; i < faqQuestion.length; i++) {
     });
   }
 
-
-
-
-
-
- 
 
 
 /*

@@ -105,11 +105,11 @@ h1 {
     flex-basis: 50%;;
     position: relative;
     background: url('images/bg-pattern-desktop.svg') no-repeat -570px -303px, url(images/illustration-woman-online-desktop.svg) no-repeat -78px 60px;
-    
-    /* background: url('images/bg-pattern-desktop.svg') no-repeat 210% 10px/cover, url(images/illustration-woman-online-desktop.svg) no-repeat -78px 60px; */
-
 }
 
+.mobile-woman-online {
+    display: none;
+}
 
 .desktop-box {
     position: absolute;
@@ -163,23 +163,41 @@ h1 {
 .faq-question:hover {
     color: var(--text-hover);
 }
-.faq-question::after {
+/* .faq-question::after {
     content: url(images/icon-arrow-down.svg);
-    /* width: 10px;
-    height: 7px; */
     position: absolute;
-    /* float: right; */
-    /* top: 9px; */
     right: 16px;
     transform: rotate(180deg);
     transition: transform 250ms ease-out;
 }
 .faq-item.close .faq-question::after {
     transform: rotate(0deg);
-    /* transform-origin: 92% 82%; */
-    /* top: 1px;
-    right: 10px; */
+} */
+
+.faq-question span {
+    display: flex;
+    justify-content: space-between;
 }
+
+.faq-question-text {
+    margin-right: 8px;;
+}
+
+.faq-question-arrow {
+    width: 14px;
+    height: 7px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    float: right;
+    transform: rotate(180deg) translateX(2px) ;
+    transition: transform 250ms ease-out;
+}
+.faq-item.close .faq-question-arrow {
+    transform: rotate(0deg);
+}
+
+
+
 .faq-item.close .faq-question {
     font-weight: 400;
 }
@@ -208,21 +226,43 @@ hr {
     max-height: 0;
 }
 
-
-
-
-/*
-
-
-*/
+.attribution { font-size: 1.1rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
 
 
 
 
+@media only screen and (max-width: 860px) {
+    .faq-container {
+        padding-right: 50px;
+    }
+    .desktop-box {
+        display: none;
+    }
+    .image-container {
+        background: url(images/illustration-woman-online-mobile.svg) no-repeat center center;
+    }
+}
 
-
-
-
-
-    .attribution { font-size: 1.1rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+@media only screen and (max-width: 670px) {
+    .faq-container {
+        margin: 22px 24px;
+        padding: 0;
+    }
+    .faq-container h1 {
+        text-align: center;
+    }
+    .faq-accordion-card {
+        min-width: 327px;
+        flex-direction: column;
+    }
+    .image-container {
+        justify-content: center;
+        padding-bottom: 40px;
+        background: url(images/bg-pattern-mobile.svg) no-repeat center top 5px;
+    }
+    .mobile-woman-online {
+        display: block;
+        margin-top: -108px;
+    }
+}
