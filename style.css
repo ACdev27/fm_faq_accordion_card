@@ -88,15 +88,6 @@ h1 {
     background-color: var(--card-bg);
     border-radius: 23px;
 }
-/* .image-container::before {
-    content: url(images/illustration-box-desktop.svg);
-    position: absolute;
-    z-index: 10;
-    margin-top: 130px;
-    margin-left: -450px;
-
-} */
-
 
 .image-container {
     display: flex;
@@ -119,14 +110,12 @@ h1 {
     transition: left 500ms;
 }
 
-
 .image-container .woman-online {
     position: relative;
     width: 100%;
     max-width: 471px;
     left: -68px;
 }
-
 
 .faq-container {
     flex-basis: 50%;
@@ -148,7 +137,6 @@ h1 {
     color: var(--text-hover);
 }
 
-
 .faq-question {
     position: relative;
     font-size: 1.4rem;
@@ -159,20 +147,11 @@ h1 {
     border: none;
     outline: none;
     cursor: pointer;
+    transition: color 250ms;
 }
 .faq-question:hover {
     color: var(--text-hover);
 }
-/* .faq-question::after {
-    content: url(images/icon-arrow-down.svg);
-    position: absolute;
-    right: 16px;
-    transform: rotate(180deg);
-    transition: transform 250ms ease-out;
-}
-.faq-item.close .faq-question::after {
-    transform: rotate(0deg);
-} */
 
 .faq-question span {
     display: flex;
@@ -197,12 +176,9 @@ h1 {
 }
 
 
-
 .faq-item.close .faq-question {
     font-weight: 400;
 }
-
-
 
 hr {
     border: 1px solid var(--divider-color);
@@ -226,13 +202,16 @@ hr {
     max-height: 0;
 }
 
-.attribution { font-size: 1.1rem; text-align: center; }
+.attribution { font-size: 1.1rem; text-align: center; margin-top: 15px; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
 
 
 
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 910px) {
+    .content {
+        margin: 0px 40px;
+    }
     .faq-container {
         padding-right: 50px;
     }
@@ -240,29 +219,43 @@ hr {
         display: none;
     }
     .image-container {
-        background: url(images/illustration-woman-online-mobile.svg) no-repeat center center;
+        background: url(images/illustration-woman-online-mobile.svg) no-repeat left -60px bottom 120px, url(images/bg-pattern-mobile.svg) no-repeat left -60px bottom 83px;
+        background-size: 110%;
+    }
+}
+
+@media only screen and (max-width: 790px) {
+    .content {
+        margin: 0px 30px;
     }
 }
 
 @media only screen and (max-width: 670px) {
+    .content {
+        margin: 0px 24px;
+    }
     .faq-container {
-        margin: 22px 24px;
+        margin: 12px 24px;
         padding: 0;
     }
     .faq-container h1 {
         text-align: center;
     }
     .faq-accordion-card {
-        min-width: 327px;
+        /* min-width: 327px; */
         flex-direction: column;
+        margin-top: 15px;
     }
     .image-container {
         justify-content: center;
         padding-bottom: 40px;
-        background: url(images/bg-pattern-mobile.svg) no-repeat center top 5px;
+        background: url(images/bg-pattern-mobile.svg) no-repeat center top 0px;
     }
     .mobile-woman-online {
         display: block;
         margin-top: -108px;
+    }
+    h1 {
+        margin-bottom: 30px;
     }
 }
