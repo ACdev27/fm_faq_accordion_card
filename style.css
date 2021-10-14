@@ -1,36 +1,3 @@
-/*
-
-
-See hover states for all interactive elements on the page
-Hide/Show the answer to a question when the question is clicked
-
-Question - make whole div that includes questoin adn arrow icon clicable.
-
-Answer - starts hidden. Then revealed.
-
-hover - question text turns orange (like icon)
-
-Question active it is bold and black
-
-image. Litle cube, looks like it moves to left on hover?
-
-
-Accordian
-Collapsing an element will animate the height from its current value to 0.
-
-Arrow - 180 degee rotation
-
-Do they all close except for one you click to open?
-
-
-HTML 
-.accordian
-     .accordian-item
-          h2	faq-question
-          div  faq-answer
-
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
 :root {
@@ -175,7 +142,6 @@ h1 {
     transform: rotate(0deg);
 }
 
-
 .faq-item.close .faq-question {
     font-weight: 400;
 }
@@ -204,8 +170,6 @@ hr {
 
 .attribution { font-size: 1.1rem; text-align: center; margin-top: 15px; }
 .attribution a { color: hsl(228, 45%, 44%); }
-
-
 
 
 @media only screen and (max-width: 910px) {
@@ -258,4 +222,4 @@ hr {
     h1 {
         margin-bottom: 30px;
     }
-}
+}  
