@@ -38,7 +38,7 @@ h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 768px;
+    min-height: 768px;
     background: linear-gradient(180deg, var(--gradient-top), var(--gradient-bottom));
 }
 .content {
@@ -183,7 +183,7 @@ hr {
         display: none;
     }
     .image-container {
-        background: url(images/illustration-woman-online-mobile.svg) no-repeat left -60px bottom 120px, url(images/bg-pattern-mobile.svg) no-repeat left -60px bottom 83px;
+        background: url(images/illustration-woman-online-mobile.svg) no-repeat left -60px top 68px, url(images/bg-pattern-mobile.svg) no-repeat left -60px top 250px;
         background-size: 110%;
     }
 }
@@ -205,10 +205,15 @@ hr {
     .faq-container h1 {
         text-align: center;
     }
+    #faq-accordion {
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-bottom: 40px;
+    }
     .faq-accordion-card {
         /* min-width: 327px; */
         flex-direction: column;
-        margin-top: 15px;
+        margin-top: 148px;
     }
     .image-container {
         justify-content: center;
