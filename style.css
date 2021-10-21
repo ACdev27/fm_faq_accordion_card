@@ -54,6 +54,7 @@ h1 {
     margin: 0 auto;
     background-color: var(--card-bg);
     border-radius: 23px;
+    box-shadow: 0px 30px 55px -10px rgba(74, 12, 116, 0.6);
 }
 
 .image-container {
@@ -135,7 +136,7 @@ h1 {
     margin-top: 8px;
     margin-bottom: 8px;
     float: right;
-    transform: rotate(180deg) translateX(2px) ;
+    transform: rotate(180deg) translateX(4px) ;
     transition: transform 250ms ease-out;
 }
 .faq-item.close .faq-question-arrow {
